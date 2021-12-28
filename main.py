@@ -21,7 +21,7 @@ def telegram_bot(token):
     @bot.message_handler(content_types=["text"])
     def send_text(message):
         if message.text.lower() == "price":
-            try:
+            try
                 req = requests.get("https://yobit.net/api/3/ticker/btc_usd")
                 response = req.json()
                 sell_price = response["btc_usd"]["sell"]
